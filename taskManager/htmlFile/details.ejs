@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="/style.css">
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    
+    <div id="details_div">
+    <h1>Details file</h1>
+    <p><%= detail.name %></p>
+    <div id="name_container">
+    <h4 id="name_title">Change Name</h4><input type="text" name = "name" id="nameField">
+    </div>
+    
+    <div id="completed_container">
+    <p id="completed_title" >Completed</p><input type ="checkbox" value = "<%= detail.completed %>" id="completedBox" />
+    <button id="editBtn" data-doc="<%= detail._id %>">Edit</button>
+    </div>
+
+    </div>
+    
+    
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+<script>
+    let editBtn = document.getElementById("editBtn");
+    let nameField = document.getElementById("nameField")
+    let completedBtn = document.getElementById("completedBox");
+    let footer = document.querySelector("footer p")
+    editBtn.addEventListener("click", function(e){
+        let editData = editBtn.dataset.doc;
+        console.log(editData);
+     let url = `/api/v1/tasks/${editData}`;
+     let data = {
+     name: nameField.value,
+     completed : completed.value
+     }
+        fetch(url, {
+            method: "PATCH", 
+            headers : {"Content-type" : "text/html"},
+            body: JSON.stringify(data)
+ 
+         
+        })
+.then(response => response.json())
+ .then(data => window.location.href = data.redirect) //returns the URL of the current page
+ .catch(err => console.log(err));
+
+        })
+
+        let dates = new Date();
+        let years = dates.getFullYear()
+        console.log(years);
+    footer.innerHTML = years;
+        
+    </script>
+</html>

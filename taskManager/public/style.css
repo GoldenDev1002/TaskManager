@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    
+    
+}
+body{
+    background: rgba(228, 228, 241, 0.648);
+    margin:0px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+nav{
+    background-color: rgba(228, 228, 241, 0.648);
+    width: 110%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+    margin-bottom: 10px;
+
+}
+
+h1{
+    color: rgb(0, 0, 0);
+}
+
+p{
+    color: rgb(0, 0, 0);
+}
+#navDiv{
+    display: flex;
+    
+}
+#img_holder{
+    margin-left: 3rem;
+}
+#links_holder{
+    margin-left: 42rem;
+}
+#links_holder ul{
+    color: black;
+    list-style-type: none;
+    width: 100%;
+   
+    margin-right: 4rem;
+    display:flex;
+ 
+   }
+
+ li {
+   
+    padding-right: 2rem;
+    cursor: pointer;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.details_section{
+   
+    background-color: #f33698;
+    padding: 2rem;
+    width: 200px;
+    height: 400px;
+
+}
+
+#myForm{
+    width : 500px;
+    height: 200px;
+   margin: 0 35%;
+ position:relative;
+    
+}
+
+#myForm *{
+    display: flex;
+}
+input[type="text"]{
+    border-top: hidden;
+    border-right: hidden;
+    border-left:hidden;
+    border-bottom: 1px solid grey;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 80px;
+    width: 90%;
+   
+}
+
+
+#allTasks{
+    display: flex;
+    margin: 0 35%;
+    overflow: hidden;
+}
+
+.eachTask{
+    background-color: rgb(253, 253, 253);
+    text-indent: 3%;
+    width: 600px;
+    height: 200px;
+    position: absolute;
+
+   
+  
+}
+.line{
+    background-color: rgba(228, 228, 241, 0.648);
+    width: 100%;
+    height: 50px;
+
+}
+
+.title{
+    margin: 0 35%;
+    position: relative;
+    top: 70px;
+
+}
+
+#task_title{
+    margin: 10px 35%;
+    position: relative;
+    top: -20px;
+    font-size: 25px;
+    
+}
+
+#deleteButton{
+    background-color: red;
+    color: white;
+    padding: .35rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    top: -5%;
+    left: 70%;
+}
+
+#submitButton{
+    background-color: rgb(255, 0, 255);
+    color: white;
+    padding: .35rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    top: 30%;
+    left: 105%;
+}
+
+
+
+#deleteButton:hover{
+    background-color: rgb(247, 102, 102);
+    border: none;
+
+}
+
+#myButtons:hover{
+    background-color: rgb(250, 144, 250);
+    border: none;
+
+}
+
+#updateButton{
+    background-color: rgb(34, 0, 255);
+    color: white;
+    padding: .35rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    top: -5%;
+    left: 80%;
+}
+
+#errorDiv{
+    margin: 10px auto;
+    width: 500px;
+    height: 500px;
+}
+
+.fixedNav{
+    background-color: white;
+    width: 109%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+    position: fixed;
+    
+}
+
+#details_div{
+    width: 90%;
+    height: 800px;
+    margin: 20px 40%;
+}
+
+#name_container{
+   
+    display: flex;
+    position: absolute;
+}
+
+#completed_container {
+   
+    display: flex;
+    position: absolute;
+    top: 220px;
+} 
+
+#nameField{
+    width: 60%;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    left: 30px;
+}
+
+#name_title{
+   
+    position: relative;
+    top: -15px;
+}
+
+
+
+#editBtn{
+    background-color: rgb(255, 0, 208);
+    color: white;
+    padding: .20rem;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    border: none;
+    position: relative;  
+}
+
+footer{
+  display: flex;
+padding: 10px 45%;
+
+  background-color: rgba(228, 228, 241, 0.648);
+  width: 110%;
+  border-top: 1px solid rgba(128, 128, 128, 0.219);
+  position:absolute;
+  
+
+}
+
+footer p {
+position: relative;
+top: 5px;
+left: 5px;
+}
